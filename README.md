@@ -16,7 +16,7 @@ This project includes:
 
 As a first step, add `mocha-split-tests/reporter/mocha` reporter to your mocha tests setup.
 
-As mocha v7 still doesn't support multiple reporters out of the box. So in order to enable `@rishabhpoddar/mocha-split-tests/reporter/mocha` reporter, you have to use a 3rd-party package like [mocha-multi](https://github.com/rishabhpoddar/mocha-multi). Here is an example config:
+As mocha v7 still doesn't support multiple reporters out of the box. So in order to enable `mocha-split-tests/reporter/mocha` reporter, you have to use a 3rd-party package like [mocha-multi](https://github.com/rishabhpoddar/mocha-multi). Here is an example config:
 
 ```js
 // mocha-multi-reporters.json
@@ -28,7 +28,7 @@ As mocha v7 still doesn't support multiple reporters out of the box. So in order
       output: 'junit/junit.xml'
     }
   },
-  '@rishabhpoddar/mocha-split-tests/reporter/mocha': 'runtime.log'
+  'mocha-split-tests/reporter/mocha': 'runtime.log'
 }
 ```
 
@@ -46,7 +46,7 @@ Add a runtime reporter to `wdio.conf.js`:
 reporters: [
   "spec",
   [
-    require("@rishabhpoddar/mocha-split-tests/reporter/wdio"),
+    require("mocha-split-tests/reporter/wdio"),
     {
       outputDir: `${yourLogDir}/runtimes`
     }
@@ -85,7 +85,7 @@ export SPEC_FILES=$(npx mocha-split-tests -t $CIRCLE_NODE_TOTAL -g $CIRCLE_NODE_
 
 ```js
 function getSpecs(totalGroups, groupNumber) {
-  const { getTestGroup } = require("@rishabhpoddar/mocha-split-tests");
+  const { getTestGroup } = require("mocha-split-tests");
   const testGroup = getTestGroup({
     testFilePattern: "./test/**/*.spec.js",
     runtimeLogsPattern: ".tmp/test/runtime*.log",
