@@ -1,4 +1,4 @@
-# @rishabhpoddar/mocha-split-tests
+# mocha-split-tests
 
 
 A tool that helps optimizing overall test runtime for big test suites that can be distributed across multiple containers / VMs running in parallel.
