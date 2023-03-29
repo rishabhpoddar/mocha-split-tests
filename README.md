@@ -14,7 +14,7 @@ This project includes:
 
 ### Mocha test runner
 
-As a first step, add `@rishabhpoddar/mocha-split-tests/reporter/mocha` reporter to your mocha tests setup.
+As a first step, add `mocha-split-tests/reporter/mocha` reporter to your mocha tests setup.
 
 As mocha v7 still doesn't support multiple reporters out of the box. So in order to enable `@rishabhpoddar/mocha-split-tests/reporter/mocha` reporter, you have to use a 3rd-party package like [mocha-multi](https://github.com/rishabhpoddar/mocha-multi). Here is an example config:
 
